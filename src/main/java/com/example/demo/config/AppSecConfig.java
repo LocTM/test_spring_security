@@ -58,8 +58,8 @@ public class AppSecConfig  {
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
         authenticationProvider.setUserDetailsService(userService);
-//        authenticationProvider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
-        authenticationProvider.setPasswordEncoder(passwordEncoder());
+        authenticationProvider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
+//        authenticationProvider.setPasswordEncoder(passwordEncoder());
         return authenticationProvider;
     }
 //    @Bean
