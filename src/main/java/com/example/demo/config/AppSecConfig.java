@@ -43,7 +43,7 @@ public class AppSecConfig  {
         http.authorizeHttpRequests((authorize) -> {
             authorize
                     .requestMatchers("/home").permitAll()
-                    .requestMatchers("/user").hasRole("USER")
+                    .requestMatchers("/user").hasAnyRole("USER","ADMIN")
                     .requestMatchers("/admin").hasRole("ADMIN")
             ;
         }).formLogin(Customizer.withDefaults());
